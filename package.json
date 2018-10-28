@@ -1,8 +1,8 @@
 {
-  "name": "css-utils",
+  "name": "@chriscalo/css-utils",
   "version": "0.0.1",
   "description": "A collection of common CSS utilities for rapid prototyping.",
-  "main": "css-util.css",
+  "main": "dist/css-util.css",
   "repository": "https://github.com/chriscalo/css-utils.git",
   "author": "Chris Calo <chris.calo@gmail.com>",
   "license": "MIT",
