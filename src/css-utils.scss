@@ -1,0 +1,291 @@
+@import "./functions.scss";
+
+
+/*============================================================================*\
+  RESETS
+\*============================================================================*/
+
+[focus-reset]:focus,
+[focus-no-outline]:focus,
+[no-outline] {
+  outline: none;
+}
+
+[reset],
+[button-reset] {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+
+/*============================================================================*\
+  LAYOUT
+\*============================================================================*/
+
+[block] {
+  display: block;
+}
+
+[spacer] {
+  flex-grow: 1;
+}
+
+[debug],
+[outline] {
+  outline: solid 1px magenta;
+}
+
+/*============================================================================*\
+  FLEXBOX
+\*============================================================================*/
+
+[flex-col],
+[stack-v],
+[stack-y] {
+  display: flex;
+  flex-direction: column;
+}
+
+[flex-row],
+[stack-h],
+[stack-x] {
+  display: flex;
+  flex-direction: row;
+}
+
+[grow] {
+  flex-grow: 1;
+}
+
+[no-grow] {
+  flex-grow: 0;
+}
+
+[shrink] {
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+[no-shrink] {
+  flex-shrink: 0;
+}
+
+[items-center] {
+  align-items: center;
+}
+
+
+/*============================================================================*\
+  Spacing and sizing based on an 8px grid
+  TODO: split into two scales:
+  - a spacing scale for margin & padding
+  - a sizing scale for height & width
+\*============================================================================*/
+
+$grid-unit: 8px;
+$grid-scale: 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5 6 7 8 9 10 11 12 13 14 16 18 20 24 28 32;
+
+@each $n in $grid-scale {
+  // escape decimal points so they make valid attribute selectors
+  $n-str: str-replace(inspect($n), ".", "\\.");
+  $len: $n * $grid-unit;
+  
+  [pad-#{$n-str}] {
+    padding: $len;
+  }
+  
+  [pad-x-#{$n-str}] {
+    padding-left: $len;
+    padding-right: $len;
+  }
+  
+  [pad-y-#{$n-str}] {
+    padding-top: $len;
+    padding-bottom: $len;
+  }
+  
+  [margin-#{$n-str}] {
+    margin: $len;
+  }
+  
+  [margin-x-#{$n-str}] {
+    margin-left: $len;
+    margin-right: $len;
+  }
+  
+  [margin-y-#{$n-str}] {
+    margin-top: $len;
+    margin-bottom: $len;
+  }
+  
+  [width-#{$n-str}] {
+    width: $len;
+  }
+  
+  [height-#{$n-str}] {
+    height: $len;
+  }
+  
+  [size-#{$n-str}] {
+    width: $len;
+    height: $len;
+  }
+
+}
+
+[height-full] { height: 100%; }
+[width-full]  { width:  100%; }
+
+
+/*============================================================================*\
+  ICONS
+\*============================================================================*/
+
+[icon-xs] { font-size: 16px; }
+[icon-s]  { font-size: 20px; }
+[icon-m]  { font-size: 24px; }
+[icon-l]  { font-size: 28px; }
+[icon-xl] { font-size: 32px; }
+
+/*============================================================================*\
+  TEXT
+\*============================================================================*/
+
+[text-xxxs] { font-size: 11px; }
+[text-xxs]  { font-size: 12px; }
+[text-xs]   { font-size: 13px; }
+[text-s]    { font-size: 14px; }
+[text-m]    { font-size: 16px; }
+[text-l]    { font-size: 20px; }
+[text-xl]   { font-size: 24px; }
+[text-xxl]  { font-size: 32px; }
+[text-xxxl] { font-size: 48px; }
+
+[uppercase] {
+  text-transform: uppercase;
+}
+
+
+
+/*============================================================================*\
+  BORDERS
+\*============================================================================*/
+
+$stroke-color: rgba(0, 0, 0, 0.1);
+$stroke: solid 1px $stroke-color;
+
+[stroke-y] {
+  border-top: $stroke;
+  border-bottom: $stroke;
+}
+
+[stroke-x] {
+  border-right: $stroke;
+  border-left: $stroke;
+}
+
+[stroke-top] {
+  border-top: $stroke;
+}
+
+[stroke-right] {
+  border-right: $stroke;
+}
+
+[stroke-bottom] {
+  border-bottom: $stroke;
+}
+
+[stroke-left] {
+  border-left: $stroke;
+}
+
+
+/*============================================================================*\
+  INTERACTION
+\*============================================================================*/
+
+[no-select] {
+  user-select: none;
+}
+
+
+/*============================================================================*\
+  COLORS
+\*============================================================================*/
+
+$greyscale: (
+  "000": #000,
+  "111": #111,
+  "222": #222,
+  "333": #333,
+  "444": #444,
+  "555": #555,
+  "666": #666,
+  "777": #777,
+  "888": #888,
+  "999": #999,
+  "aaa": #aaa,
+  "bbb": #bbb,
+  "ccc": #ccc,
+  "ddd": #ddd,
+  "eee": #eee,
+  "fff": #fff,
+);
+
+@each $name, $color in $greyscale {
+  [color-#{$name}] {
+    color: $color;
+  }
+  
+  [color-#{$name}] {
+    color: $color;
+  }
+  
+  [hover-color-#{$name}]:hover {
+    color: $color;
+  }
+  
+  [bg-#{$name}] {
+    background-color: $color;
+  }
+  
+  [hover-bg-#{$name}]:hover {
+    background-color: $color;
+  }
+}
+
+/*============================================================================*\
+  CORNERS
+\*============================================================================*/
+
+$corners: (
+  none: 0,
+  xs: 1px,
+  s: 2px,
+  m: 4px,
+  l: 8px,
+  xl: 16px,
+  xxl: 32px,
+);
+
+@each $name, $value in $corners {
+  [rounded-#{$name}] {
+    border-radius: $value;
+  }
+}
+
+
+[scroll-y] {
+  overflow-y: auto;
+}
+
+[scroll-x] {
+  overflow-x: auto;
+}
