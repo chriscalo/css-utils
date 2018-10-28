@@ -1255,6 +1255,14 @@
   user-select: none;
 }
 
+[scroll-y] {
+  overflow-y: auto;
+}
+
+[scroll-x] {
+  overflow-x: auto;
+}
+
 /*============================================================================*\
   COLORS
 \*============================================================================*/
@@ -1607,12 +1615,4 @@
 
 [rounded-xxl] {
   border-radius: 32px;
-}
-
-[scroll-y] {
-  overflow-y: auto;
-}
-
-[scroll-x] {
-  overflow-x: auto;
 }

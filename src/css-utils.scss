@@ -215,6 +215,14 @@ $stroke: solid 1px $stroke-color;
   user-select: none;
 }
 
+[scroll-y] {
+  overflow-y: auto;
+}
+
+[scroll-x] {
+  overflow-x: auto;
+}
+
 
 /*============================================================================*\
   COLORS
@@ -279,13 +287,4 @@ $corners: (
   [rounded-#{$name}] {
     border-radius: $value;
   }
-}
-
-
-[scroll-y] {
-  overflow-y: auto;
-}
-
-[scroll-x] {
-  overflow-x: auto;
 }
