@@ -85,7 +85,7 @@ last-rounded-none last-rounded-xs last-rounded-s last-rounded-m last-rounded-l l
 ```
 
 
-## Development
+## Local development
 
 To develop, run the following commands:
 
@@ -94,7 +94,24 @@ yarn # install dependencies
 yarn run watch # start dev mode
 ```
 
-## Production
+## Publish to npm
+
+First, update the version:
+
+```sh
+npm version patch
+# or
+npm version minor
+```
+
+Then log in and publish:
+
+```sh
+npm login
+npm publish
+```
+
+## Production use
 
 Not recommended. There are no tests, and there's no guarantee that these
 attribute names don't conflict with other libraries.

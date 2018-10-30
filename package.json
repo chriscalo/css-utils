@@ -10,8 +10,7 @@
   "scripts": {
     "watch": "run-p build:watch prettier:watch",
     "build:watch": "node-sass --watch src/css-utils.scss dist/css-utils.css",
-    "prettier:watch": "onchange 'dist/*.css' -- prettier --write {{changed}}",
-    "publish": "npm version patch && npm publish"
+    "prettier:watch": "onchange 'dist/*.css' -- prettier --write {{changed}}"
   },
   "devDependencies": {
     "node-sass": "^4.9.4",
