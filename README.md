@@ -14,7 +14,7 @@ Confused why a layout is doing what it's doing? Make the bounding boxes visible:
   <div outline>child one</div>
   <div outline>child two</div>
   <div outline>child two</div>
-</div> 
+</div>
 ```
 
 Apply common layout via display properties:
@@ -69,16 +69,19 @@ Use the same system for height, width, or both:
 There are several more attributes available:
 
 ```text
+content-start content-end content-center content-distribute content-space-around
 icon-xs icon-s icon-m icon-l icon-xl
 text-xxxs text-xxs text-xs text-s text-m text-l text-xl text-xxl text-xxxl
 uppercase
-stroke-y stroke-x stroke-top stroke-right stroke-bottom stroke-left
+stroke stroke-y stroke-x stroke-top stroke-right stroke-bottom stroke-left
 no-select scroll-y scroll-x
 color-000 color-111 color-222 … color-fff
 hover-color-000 hover-color-111 hover-color-222 … hover-color-fff
 bg-000 bg-111 bg-222 … bg-fff
 hover-bg-000 hover-bg-111 hover-bg-222 … hover-bg-fff
 rounded-none rounded-xs rounded-s rounded-m rounded-l rounded-xl rounded-xxl
+first-rounded-none first-rounded-xs first-rounded-s first-rounded-m first-rounded-l first-rounded-xl first-rounded-xxl
+last-rounded-none last-rounded-xs last-rounded-s last-rounded-m last-rounded-l last-rounded-xl last-rounded-xxl
 ```
 
 

@@ -80,18 +80,43 @@
   align-items: center;
 }
 
+[content-flex-start],
+[content-start] {
+  justify-content: flex-start;
+}
+
+[content-flex-end],
+[content-end] {
+  justify-content: flex-end;
+}
+
+[content-center] {
+  justify-content: center;
+}
+
+[content-space-between],
+[content-between],
+[content-distribute] {
+  justify-content: space-between;
+}
+
+[content-space-around],
+[content-around] {
+  justify-content: space-around;
+}
+
+
 
 /*============================================================================*\
   Spacing and sizing based on an 8px grid
-  TODO: split into two scales:
-  - a spacing scale for margin & padding
-  - a sizing scale for height & width
 \*============================================================================*/
 
 $grid-unit: 8px;
-$grid-scale: 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5 6 7 8 9 10 11 12 13 14 16 18 20 24 28 32;
 
-@each $n in $grid-scale {
+// TODO: adjust spacing scale for smaller values
+$grid-space-scale: 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5 6 7 8 9 10 11 12 13 14 16 18 20 24 28 32;
+
+@each $n in $grid-space-scale {
   // escape decimal points so they make valid attribute selectors
   $n-str: str-replace(inspect($n), ".", "\\.");
   $len: $n * $grid-unit;
@@ -123,6 +148,15 @@ $grid-scale: 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5 6 7 8 9 10 11 12 13 14 16 18 20 24 
     margin-top: $len;
     margin-bottom: $len;
   }
+}
+
+// TODO: adjust size scale for larger values
+$grid-size-scale: 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5 6 7 8 9 10 11 12 13 14 16 18 20 24 28 32;
+
+@each $n in $grid-size-scale {
+  // escape decimal points so they make valid attribute selectors
+  $n-str: str-replace(inspect($n), ".", "\\.");
+  $len: $n * $grid-unit;
   
   [width-#{$n-str}] {
     width: $len;
@@ -136,7 +170,6 @@ $grid-scale: 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5 6 7 8 9 10 11 12 13 14 16 18 20 24 
     width: $len;
     height: $len;
   }
-
 }
 
 [height-full] { height: 100%; }
@@ -179,6 +212,10 @@ $grid-scale: 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5 6 7 8 9 10 11 12 13 14 16 18 20 24 
 
 $stroke-color: rgba(0, 0, 0, 0.1);
 $stroke: solid 1px $stroke-color;
+
+[stroke] {
+  border: $stroke;
+}
 
 [stroke-y] {
   border-top: $stroke;
@@ -286,5 +323,43 @@ $corners: (
 @each $name, $value in $corners {
   [rounded-#{$name}] {
     border-radius: $value;
+  }
+  
+  [first-rounded-#{$name}]:first-child {
+    border-radius: $value;
+  }
+  
+  [last-rounded-#{$name}]:last-child {
+    border-radius: $value;
+  }
+  
+  [rounded-left-#{$name}] {
+    border-top-left-radius: $value;
+    border-bottom-left-radius: $value;
+  }
+  
+  [first-rounded-left-#{$name}]:first-child {
+    border-top-left-radius: $value;
+    border-bottom-left-radius: $value;
+  }
+  
+  [last-rounded-left-#{$name}]:last-child {
+    border-top-left-radius: $value;
+    border-bottom-left-radius: $value;
+  }
+  
+  [rounded-right-#{$name}] {
+    border-top-right-radius: $value;
+    border-bottom-right-radius: $value;
+  }
+  
+  [first-rounded-right-#{$name}]:first-child {
+    border-top-right-radius: $value;
+    border-bottom-right-radius: $value;
+  }
+  
+  [last-rounded-right-#{$name}]:last-child {
+    border-top-right-radius: $value;
+    border-bottom-right-radius: $value;
   }
 }
