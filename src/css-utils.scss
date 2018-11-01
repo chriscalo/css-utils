@@ -30,18 +30,42 @@
   LAYOUT
 \*============================================================================*/
 
+[debug],
+[outline] {
+  outline: solid 1px magenta;
+  outline-offset: -1px; // inset instead of outset
+}
+
 [block] {
   display: block;
+}
+
+[inline-block] {
+  display: inline-block;
+}
+
+[grid] {
+  display: grid;
+}
+
+[absolute] {
+  position: absolute;
+}
+
+[fixed] {
+  position: fixed;
+}
+
+[center-xy] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 [spacer] {
   flex-grow: 1;
 }
 
-[debug],
-[outline] {
-  outline: solid 1px magenta;
-}
 
 /*============================================================================*\
   FLEXBOX
@@ -218,32 +242,59 @@ $grid-size-scale: 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5 6 7 8 9 10 11 12 13 14 16 18 2
 
 /*============================================================================*\
   ICONS
+  Used to resize icon fonts.
 \*============================================================================*/
 
-[icon-xs] { font-size: 16px; }
-[icon-s]  { font-size: 20px; }
-[icon-m]  { font-size: 24px; }
-[icon-l]  { font-size: 28px; }
-[icon-xl] { font-size: 32px; }
+$icon-scale: (
+  "xs": 16px,
+  "s": 20px,
+  "m": 24px,
+  "l": 28px,
+  "xl": 32px,
+);
+
+@each $name, $value in $icon-scale {
+  [icon-#{$name}] {
+    font-size: $value;
+  }
+}
+
 
 /*============================================================================*\
   TEXT
 \*============================================================================*/
 
-[text-xxxs] { font-size: 11px; }
-[text-xxs]  { font-size: 12px; }
-[text-xs]   { font-size: 13px; }
-[text-s]    { font-size: 14px; }
-[text-m]    { font-size: 16px; }
-[text-l]    { font-size: 20px; }
-[text-xl]   { font-size: 24px; }
-[text-xxl]  { font-size: 32px; }
-[text-xxxl] { font-size: 48px; }
+$text-scale: (
+  "xxxs": 11px,
+  "xxs": 12px,
+  "xs": 13px,
+  "s": 14px,
+  "m": 16px,
+  "l": 20px,
+  "xl": 24px,
+  "xxl": 32px,
+  "xxxl": 48px,
+);
 
-[uppercase] {
-  text-transform: uppercase;
+@each $name, $value in $text-scale {
+  [text-#{$name}] {
+    font-size: $value;
+  }
 }
 
+// text-transform
+@each $value in (capitalize uppercase lowercase) {
+  [#{$value}] {
+    text-transform: $value;
+  }
+}
+
+@each $value in (baseline sub super text-top text-bottom middle top bottom) {
+  [text-align-#{$value}],
+  [align-#{$value}] {
+    vertical-align: $value;
+  }
+}
 
 
 /*============================================================================*\
@@ -346,6 +397,7 @@ $greyscale: (
   }
 }
 
+
 /*============================================================================*\
   CORNERS
 \*============================================================================*/
@@ -360,30 +412,14 @@ $corners: (
   xxl: 32px,
 );
 
+// TODO: rounded-top-* and rounded-bottom-*
+
 @each $name, $value in $corners {
   [rounded-#{$name}] {
     border-radius: $value;
   }
   
-  [first-rounded-#{$name}]:first-child {
-    border-radius: $value;
-  }
-  
-  [last-rounded-#{$name}]:last-child {
-    border-radius: $value;
-  }
-  
   [rounded-left-#{$name}] {
-    border-top-left-radius: $value;
-    border-bottom-left-radius: $value;
-  }
-  
-  [first-rounded-left-#{$name}]:first-child {
-    border-top-left-radius: $value;
-    border-bottom-left-radius: $value;
-  }
-  
-  [last-rounded-left-#{$name}]:last-child {
     border-top-left-radius: $value;
     border-bottom-left-radius: $value;
   }
@@ -393,13 +429,83 @@ $corners: (
     border-bottom-right-radius: $value;
   }
   
-  [first-rounded-right-#{$name}]:first-child {
+  [rounded-top-#{$name}] {
+    border-top-left-radius: $value;
     border-top-right-radius: $value;
+  }
+  
+  [rounded-bottom-#{$name}] {
+    border-bottom-left-radius: $value;
     border-bottom-right-radius: $value;
   }
   
-  [last-rounded-right-#{$name}]:last-child {
-    border-top-right-radius: $value;
-    border-bottom-right-radius: $value;
+  [rounded-x-first-last-#{$name}] {
+    &:first-child {
+      border-top-left-radius: $value;
+      border-bottom-left-radius: $value;
+    }
+    
+    &:last-child {
+      border-top-right-radius: $value;
+      border-bottom-right-radius: $value;
+    }
+  }
+  
+  [rounded-y-first-last-#{$name}] {
+    &:first-child {
+      border-top-left-radius: $value;
+      border-top-right-radius: $value;
+    }
+    
+    &:last-child {
+      border-bottom-left-radius: $value;
+      border-bottom-right-radius: $value;
+    }
+  }
+}
+
+
+/*============================================================================*\
+  OPACITY
+\*============================================================================*/
+
+$opacity-scale: (
+  none: 0,
+  0: 0,
+  10: 0.10,
+  20: 0.20,
+  25: 0.25,
+  30: 0.30,
+  40: 0.40,
+  50: 0.50,
+  60: 0.60,
+  70: 0.70,
+  75: 0.75,
+  80: 0.80,
+  90: 0.90,
+  100: 1,
+  full: 1,
+);
+
+@each $name, $value in $opacity-scale {
+  [opacity-#{$name}] {
+    opacity: $value;
+  }
+}
+
+/*============================================================================*\
+  INTERACTION
+\*============================================================================*/
+
+[no-mouse] {
+  pointer-events: none;
+}
+
+// Source: https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+$cursors: auto default none context-menu help pointer progress wait cell crosshair text vertical-text alias copy move no-drop not-allowed e-resize n-resize ne-resize nw-resize s-resize se-resize sw-resize w-resize ew-resize ns-resize nesw-resize nwse-resize col-resize row-resize all-scroll zoom-in zoom-out grab grabbing;
+
+@each $cursor in $cursors {
+  [cursor-#{$cursor}] {
+    cursor: $cursor;
   }
 }
