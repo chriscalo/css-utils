@@ -162,18 +162,56 @@ $grid-size-scale: 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5 6 7 8 9 10 11 12 13 14 16 18 2
     width: $len;
   }
   
+  [min-width-#{$n-str}] {
+    min-width: $len;
+  }
+  
+  [max-width-#{$n-str}] {
+    max-width: $len;
+  }
+  
   [height-#{$n-str}] {
     height: $len;
+  }
+  
+  [min-height-#{$n-str}] {
+    min-height: $len;
+  }
+  
+  [max-height-#{$n-str}] {
+    max-height: $len;
   }
   
   [size-#{$n-str}] {
     width: $len;
     height: $len;
   }
+  
+  [min-size-#{$n-str}] {
+    min-width: $len;
+    min-height: $len;
+  }
+  
+  [max-size-#{$n-str}] {
+    max-width: $len;
+    max-height: $len;
+  }
 }
 
-[height-full] { height: 100%; }
-[width-full]  { width:  100%; }
+// TODO: incorporate `full` into the scale
+
+[height-full] {
+  height: 100%;
+}
+
+[width-full]  {
+  width:  100%;
+}
+
+[size-full]  {
+  width: 100%;
+  height: 100%;
+}
 
 
 /*============================================================================*\

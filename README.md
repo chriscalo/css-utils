@@ -57,13 +57,21 @@ But it's also possible to only apply horitontal or vertical padding:
 <div pad-y-0.5></div> <!-- padding-top: 4px; padding-bottom: 4px; -->
 ```
 
-Use the same system for height, width, or both:
+Use the same system for height, width, or both via size:
 
 ```html
-
 <div height-0.5></div> <!-- height: 4px; -->
 <div width-10></div> <!-- width: 80px; -->
 <div size-18></div> <!-- width: 144px; height: 144px; -->
+```
+
+It's also possible to specify that elements should fill their available width,
+height, or both:
+
+```html
+<div height-full></div> <!-- height: 100%; -->
+<div width-full></div> <!-- width: 100%; -->
+<div size-full></div> <!-- width: 100%; height: 100%; -->
 ```
 
 There are several more attributes available:
@@ -102,6 +110,8 @@ First, update the version:
 npm version patch
 # or
 npm version minor
+# or
+npm version major
 ```
 
 Then log in and publish:
