@@ -37,6 +37,47 @@ Simplify flexbox layout:
 </div>
 ```
 
+Helpers for grid layout:
+
+```html
+<div grid gap-1>
+  <span>One</span>
+   <!-- 8px gap here -->
+  <span>Two</span>
+</div>
+```
+
+All of the possible values are:
+
+```text
+gap-0    gap-x-0    gap-y-0
+gap-0.5  gap-x-0.5  gap-y-0.5
+gap-1    gap-x-1    gap-y-1
+gap-1.5  gap-x-1.5  gap-y-1.5
+gap-2    gap-x-2    gap-y-2
+gap-2.5  gap-x-2.5  gap-y-2.5
+gap-3    gap-x-3    gap-y-3
+gap-3.5  gap-x-3.5  gap-y-3.5
+gap-4    gap-x-4    gap-y-4
+gap-4.5  gap-x-4.5  gap-y-4.5
+gap-5    gap-x-5    gap-y-5
+gap-6    gap-x-6    gap-y-6
+gap-7    gap-x-7    gap-y-7
+gap-8    gap-x-8    gap-y-8
+gap-9    gap-x-9    gap-y-9
+gap-10   gap-x-10   gap-y-10
+gap-11   gap-x-11   gap-y-11
+gap-12   gap-x-12   gap-y-12
+gap-13   gap-x-13   gap-y-13
+gap-14   gap-x-14   gap-y-14
+gap-16   gap-x-16   gap-y-16
+gap-18   gap-x-18   gap-y-18
+gap-20   gap-x-20   gap-y-20
+gap-24   gap-x-24   gap-y-24
+gap-28   gap-x-28   gap-y-28
+gap-32   gap-x-32   gap-y-32
+```
+
 There are helpers for aligning flex content:
 
 ```html

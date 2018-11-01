@@ -148,6 +148,18 @@ $grid-space-scale: 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5 6 7 8 9 10 11 12 13 14 16 18 
   $n-str: str-replace(inspect($n), ".", "\\.");
   $len: $n * $grid-unit;
   
+  [gap-#{$n-str}] {
+    grid-gap: $len;
+  }
+  
+  [gap-x-#{$n-str}] {
+    grid-column-gap: $len;
+  }
+  
+  [gap-y-#{$n-str}] {
+    grid-row-gap: $len;
+  }
+  
   [pad-#{$n-str}] {
     padding: $len;
   }
