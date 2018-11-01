@@ -31,9 +31,9 @@ Simplify flexbox layout:
 
 ```html
 <div flex-row>
-  <span shrink>One</span> <!-- flex-shrink: 1; min-width: 0; -->
+  <span shrink>One</span> <!-- flex-shrink: 1; min-width: 0; min-height: 0; -->
   <span spacer></span> <!-- flex-grow: 1 -->
-  <span shrink>Two</span> <!-- flex-shrink: 1; min-width: 0; -->
+  <span shrink>Two</span> <!-- flex-shrink: 1; min-width: 0; min-height: 0; -->
 </div>
 ```
 
