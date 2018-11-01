@@ -3,7 +3,7 @@
 \*============================================================================*/
 [focus-reset]:focus,
 [focus-no-outline]:focus,
-[no-outline] {
+[no-outline]:focus {
   outline: none;
 }
 

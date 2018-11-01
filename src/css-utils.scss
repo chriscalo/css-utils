@@ -5,10 +5,12 @@
   RESETS
 \*============================================================================*/
 
-[focus-reset]:focus,
-[focus-no-outline]:focus,
+[focus-reset],
+[focus-no-outline],
 [no-outline] {
-  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 [reset],
