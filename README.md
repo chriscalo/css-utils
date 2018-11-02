@@ -37,7 +37,7 @@ For example:
 ```html
 <!-- notice the version is specified -->
 <link
-  href="https://unpkg.com/@chriscalo/css-utils@0.4.3/dist/css-utils.css"
+  href="https://unpkg.com/@chriscalo/css-utils@0.5.1/dist/css-utils.css"
   rel="stylesheet"
 />
 ```
