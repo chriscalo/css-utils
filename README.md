@@ -83,9 +83,14 @@ Helpers for grid layout:
    <!-- 8px gap here -->
   <span>Two</span>
 </div>
+
+<div grid>
+  <!-- will fill the entire grid -->
+  <span fill-grid>One</span>
+</div>
 ```
 
-All of the possible values are:
+All of the possible values for grid gaps are:
 
 ```text
 gap-0    gap-x-0    gap-y-0
@@ -114,6 +119,42 @@ gap-20   gap-x-20   gap-y-20
 gap-24   gap-x-24   gap-y-24
 gap-28   gap-x-28   gap-y-28
 gap-32   gap-x-32   gap-y-32
+```
+
+There are helpers for edge-pinning absolutely-positioned layers:
+
+```html
+<div absolute pin-all>
+  <!-- will fill nearest containing block -->
+</div>
+
+<div fixed pin-all>
+  <!-- will fill the viewport -->
+</div>
+
+<div absolute pin-all unpin-left width-32>
+  <!-- will create a left-docked panel -->
+</div>
+```
+
+Here are of the available pinning values:
+
+```text
+pin-all
+pin-top
+pin-right
+pin-bottom
+pin-left
+pin-x
+pin-y
+
+unpin-all
+unpin-top
+unpin-right
+unpin-bottom
+unpin-left
+unpin-x
+unpin-y
 ```
 
 There are helpers for aligning flex content:
