@@ -4,6 +4,40 @@ A collection of common CSS utilities for rapid prototyping.
 When you're trying to move quickly, typing out `class=""` is far too slow. This
 library explores the idea of applying common styles via attributes.
 
+## Get started
+
+You can install into your project via `npm` / `yarn`:
+
+```sh
+npm install @chriscalo/css-utils
+# or
+yarn add @chriscalo/css-utils
+```
+
+Or link to the latest from any web page via unpkg.com:
+
+```html
+<link
+  href="https://unpkg.com/@chriscalo/css-utils/dist/css-utils.css"
+  rel="stylesheet"
+/>
+```
+
+Linking to the latest version may break things when the library changes, so to
+link to a specific version:
+1. Go to [unpkg.com/@chriscalo/css-utils/dist/css-utils.css]()
+2. You'll be redirected to a URL with the latest version embedded in it
+3. Copy that URL and use it in your `<link>` tag
+
+For example:
+
+```html
+<link
+  href="https://unpkg.com/@chriscalo/css-utils@0.4.1/dist/css-utils.css"
+  rel="stylesheet"
+/>
+```
+
 ## Examples
 
 Confused why a layout is doing what it's doing? Make the bounding boxes visible:
