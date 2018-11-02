@@ -17,6 +17,7 @@ yarn add @chriscalo/css-utils
 Or link to the latest from any web page via unpkg.com:
 
 ```html
+<!-- will redirect to the latest version -->
 <link
   href="https://unpkg.com/@chriscalo/css-utils/dist/css-utils.css"
   rel="stylesheet"
@@ -25,13 +26,16 @@ Or link to the latest from any web page via unpkg.com:
 
 Linking to the latest version may break things when the library changes, so to
 link to a specific version:
-1. Go to [unpkg.com/@chriscalo/css-utils/dist/css-utils.css](https://unpkg.com/@chriscalo/css-utils/dist/css-utils.css)
+1. Go to [unpkg.com/@chriscalo/css-utils/dist/css-utils.css][unpkg link]
 2. You'll be redirected to a URL with the latest version embedded in it
 3. Copy that URL and use it in your `<link>` tag
+
+[unpkg link]: https://unpkg.com/@chriscalo/css-utils/dist/css-utils.css
 
 For example:
 
 ```html
+<!-- notice the version is specified -->
 <link
   href="https://unpkg.com/@chriscalo/css-utils@0.4.3/dist/css-utils.css"
   rel="stylesheet"
