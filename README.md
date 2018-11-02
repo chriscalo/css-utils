@@ -33,7 +33,7 @@ For example:
 
 ```html
 <link
-  href="https://unpkg.com/@chriscalo/css-utils@0.4.1/dist/css-utils.css"
+  href="https://unpkg.com/@chriscalo/css-utils@0.4.3/dist/css-utils.css"
   rel="stylesheet"
 />
 ```
