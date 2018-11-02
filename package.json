@@ -1,6 +1,6 @@
 {
   "name": "@chriscalo/css-utils",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A collection of common CSS utilities for rapid prototyping.",
   "main": "dist/css-utils.css",
   "repository": "https://github.com/chriscalo/css-utils.git",
