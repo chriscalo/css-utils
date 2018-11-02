@@ -25,7 +25,7 @@ Or link to the latest from any web page via unpkg.com:
 
 Linking to the latest version may break things when the library changes, so to
 link to a specific version:
-1. Go to [unpkg.com/@chriscalo/css-utils/dist/css-utils.css]()
+1. Go to [unpkg.com/@chriscalo/css-utils/dist/css-utils.css](https://unpkg.com/@chriscalo/css-utils/dist/css-utils.css)
 2. You'll be redirected to a URL with the latest version embedded in it
 3. Copy that URL and use it in your `<link>` tag
 
