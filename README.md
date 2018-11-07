@@ -6,15 +6,8 @@ library explores the idea of applying common styles via attributes.
 
 ## Get started
 
-You can install into your project via `npm` / `yarn`:
-
-```sh
-npm install @chriscalo/css-utils
-# or
-yarn add @chriscalo/css-utils
-```
-
-Or link to the latest from any web page via unpkg.com:
+The easiest way to get started is by linking to the latest from any web page via
+unpkg.com:
 
 ```html
 <!-- will redirect to the latest version -->
@@ -37,10 +30,31 @@ For example:
 ```html
 <!-- notice the version is specified -->
 <link
-  href="https://unpkg.com/@chriscalo/css-utils@0.6.1/dist/css-utils.css"
+  href="https://unpkg.com/@chriscalo/css-utils@0.6.2/dist/css-utils.css"
   rel="stylesheet"
 />
 ```
+
+But you can also install these styles into your project via `npm` / `yarn`:
+
+```sh
+npm install @chriscalo/css-utils
+# or
+yarn add @chriscalo/css-utils
+```
+
+If your build tool knows to check the `node_modules` folder, you can then
+reference the stylesheet from your HTML:
+
+```html
+<link
+  rel="stylesheet"
+  href="@chriscalo/css-utils/dist/css-utils.css"
+/>
+```
+
+Otherwise, you'll need to tweak the `href` path.
+
 
 ## Examples
 
