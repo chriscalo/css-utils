@@ -1241,6 +1241,318 @@
   margin-bottom: 256px;
 }
 
+[flex-col][gap-0] > :not(:last-child),
+[stack-v][gap-0] > :not(:last-child),
+[stack-y][gap-0] > :not(:last-child) {
+  margin-bottom: 0px;
+}
+
+[flex-col][gap-0\.5] > :not(:last-child),
+[stack-v][gap-0\.5] > :not(:last-child),
+[stack-y][gap-0\.5] > :not(:last-child) {
+  margin-bottom: 4px;
+}
+
+[flex-col][gap-1] > :not(:last-child),
+[stack-v][gap-1] > :not(:last-child),
+[stack-y][gap-1] > :not(:last-child) {
+  margin-bottom: 8px;
+}
+
+[flex-col][gap-1\.5] > :not(:last-child),
+[stack-v][gap-1\.5] > :not(:last-child),
+[stack-y][gap-1\.5] > :not(:last-child) {
+  margin-bottom: 12px;
+}
+
+[flex-col][gap-2] > :not(:last-child),
+[stack-v][gap-2] > :not(:last-child),
+[stack-y][gap-2] > :not(:last-child) {
+  margin-bottom: 16px;
+}
+
+[flex-col][gap-2\.5] > :not(:last-child),
+[stack-v][gap-2\.5] > :not(:last-child),
+[stack-y][gap-2\.5] > :not(:last-child) {
+  margin-bottom: 20px;
+}
+
+[flex-col][gap-3] > :not(:last-child),
+[stack-v][gap-3] > :not(:last-child),
+[stack-y][gap-3] > :not(:last-child) {
+  margin-bottom: 24px;
+}
+
+[flex-col][gap-3\.5] > :not(:last-child),
+[stack-v][gap-3\.5] > :not(:last-child),
+[stack-y][gap-3\.5] > :not(:last-child) {
+  margin-bottom: 28px;
+}
+
+[flex-col][gap-4] > :not(:last-child),
+[stack-v][gap-4] > :not(:last-child),
+[stack-y][gap-4] > :not(:last-child) {
+  margin-bottom: 32px;
+}
+
+[flex-col][gap-4\.5] > :not(:last-child),
+[stack-v][gap-4\.5] > :not(:last-child),
+[stack-y][gap-4\.5] > :not(:last-child) {
+  margin-bottom: 36px;
+}
+
+[flex-col][gap-5] > :not(:last-child),
+[stack-v][gap-5] > :not(:last-child),
+[stack-y][gap-5] > :not(:last-child) {
+  margin-bottom: 40px;
+}
+
+[flex-col][gap-6] > :not(:last-child),
+[stack-v][gap-6] > :not(:last-child),
+[stack-y][gap-6] > :not(:last-child) {
+  margin-bottom: 48px;
+}
+
+[flex-col][gap-7] > :not(:last-child),
+[stack-v][gap-7] > :not(:last-child),
+[stack-y][gap-7] > :not(:last-child) {
+  margin-bottom: 56px;
+}
+
+[flex-col][gap-8] > :not(:last-child),
+[stack-v][gap-8] > :not(:last-child),
+[stack-y][gap-8] > :not(:last-child) {
+  margin-bottom: 64px;
+}
+
+[flex-col][gap-9] > :not(:last-child),
+[stack-v][gap-9] > :not(:last-child),
+[stack-y][gap-9] > :not(:last-child) {
+  margin-bottom: 72px;
+}
+
+[flex-col][gap-10] > :not(:last-child),
+[stack-v][gap-10] > :not(:last-child),
+[stack-y][gap-10] > :not(:last-child) {
+  margin-bottom: 80px;
+}
+
+[flex-col][gap-11] > :not(:last-child),
+[stack-v][gap-11] > :not(:last-child),
+[stack-y][gap-11] > :not(:last-child) {
+  margin-bottom: 88px;
+}
+
+[flex-col][gap-12] > :not(:last-child),
+[stack-v][gap-12] > :not(:last-child),
+[stack-y][gap-12] > :not(:last-child) {
+  margin-bottom: 96px;
+}
+
+[flex-col][gap-13] > :not(:last-child),
+[stack-v][gap-13] > :not(:last-child),
+[stack-y][gap-13] > :not(:last-child) {
+  margin-bottom: 104px;
+}
+
+[flex-col][gap-14] > :not(:last-child),
+[stack-v][gap-14] > :not(:last-child),
+[stack-y][gap-14] > :not(:last-child) {
+  margin-bottom: 112px;
+}
+
+[flex-col][gap-16] > :not(:last-child),
+[stack-v][gap-16] > :not(:last-child),
+[stack-y][gap-16] > :not(:last-child) {
+  margin-bottom: 128px;
+}
+
+[flex-col][gap-18] > :not(:last-child),
+[stack-v][gap-18] > :not(:last-child),
+[stack-y][gap-18] > :not(:last-child) {
+  margin-bottom: 144px;
+}
+
+[flex-col][gap-20] > :not(:last-child),
+[stack-v][gap-20] > :not(:last-child),
+[stack-y][gap-20] > :not(:last-child) {
+  margin-bottom: 160px;
+}
+
+[flex-col][gap-24] > :not(:last-child),
+[stack-v][gap-24] > :not(:last-child),
+[stack-y][gap-24] > :not(:last-child) {
+  margin-bottom: 192px;
+}
+
+[flex-col][gap-28] > :not(:last-child),
+[stack-v][gap-28] > :not(:last-child),
+[stack-y][gap-28] > :not(:last-child) {
+  margin-bottom: 224px;
+}
+
+[flex-col][gap-32] > :not(:last-child),
+[stack-v][gap-32] > :not(:last-child),
+[stack-y][gap-32] > :not(:last-child) {
+  margin-bottom: 256px;
+}
+
+[flex-row][gap-0] > :not(:last-child),
+[stack-h][gap-0] > :not(:last-child),
+[stack-x][gap-0] > :not(:last-child) {
+  margin-right: 0px;
+}
+
+[flex-row][gap-0\.5] > :not(:last-child),
+[stack-h][gap-0\.5] > :not(:last-child),
+[stack-x][gap-0\.5] > :not(:last-child) {
+  margin-right: 4px;
+}
+
+[flex-row][gap-1] > :not(:last-child),
+[stack-h][gap-1] > :not(:last-child),
+[stack-x][gap-1] > :not(:last-child) {
+  margin-right: 8px;
+}
+
+[flex-row][gap-1\.5] > :not(:last-child),
+[stack-h][gap-1\.5] > :not(:last-child),
+[stack-x][gap-1\.5] > :not(:last-child) {
+  margin-right: 12px;
+}
+
+[flex-row][gap-2] > :not(:last-child),
+[stack-h][gap-2] > :not(:last-child),
+[stack-x][gap-2] > :not(:last-child) {
+  margin-right: 16px;
+}
+
+[flex-row][gap-2\.5] > :not(:last-child),
+[stack-h][gap-2\.5] > :not(:last-child),
+[stack-x][gap-2\.5] > :not(:last-child) {
+  margin-right: 20px;
+}
+
+[flex-row][gap-3] > :not(:last-child),
+[stack-h][gap-3] > :not(:last-child),
+[stack-x][gap-3] > :not(:last-child) {
+  margin-right: 24px;
+}
+
+[flex-row][gap-3\.5] > :not(:last-child),
+[stack-h][gap-3\.5] > :not(:last-child),
+[stack-x][gap-3\.5] > :not(:last-child) {
+  margin-right: 28px;
+}
+
+[flex-row][gap-4] > :not(:last-child),
+[stack-h][gap-4] > :not(:last-child),
+[stack-x][gap-4] > :not(:last-child) {
+  margin-right: 32px;
+}
+
+[flex-row][gap-4\.5] > :not(:last-child),
+[stack-h][gap-4\.5] > :not(:last-child),
+[stack-x][gap-4\.5] > :not(:last-child) {
+  margin-right: 36px;
+}
+
+[flex-row][gap-5] > :not(:last-child),
+[stack-h][gap-5] > :not(:last-child),
+[stack-x][gap-5] > :not(:last-child) {
+  margin-right: 40px;
+}
+
+[flex-row][gap-6] > :not(:last-child),
+[stack-h][gap-6] > :not(:last-child),
+[stack-x][gap-6] > :not(:last-child) {
+  margin-right: 48px;
+}
+
+[flex-row][gap-7] > :not(:last-child),
+[stack-h][gap-7] > :not(:last-child),
+[stack-x][gap-7] > :not(:last-child) {
+  margin-right: 56px;
+}
+
+[flex-row][gap-8] > :not(:last-child),
+[stack-h][gap-8] > :not(:last-child),
+[stack-x][gap-8] > :not(:last-child) {
+  margin-right: 64px;
+}
+
+[flex-row][gap-9] > :not(:last-child),
+[stack-h][gap-9] > :not(:last-child),
+[stack-x][gap-9] > :not(:last-child) {
+  margin-right: 72px;
+}
+
+[flex-row][gap-10] > :not(:last-child),
+[stack-h][gap-10] > :not(:last-child),
+[stack-x][gap-10] > :not(:last-child) {
+  margin-right: 80px;
+}
+
+[flex-row][gap-11] > :not(:last-child),
+[stack-h][gap-11] > :not(:last-child),
+[stack-x][gap-11] > :not(:last-child) {
+  margin-right: 88px;
+}
+
+[flex-row][gap-12] > :not(:last-child),
+[stack-h][gap-12] > :not(:last-child),
+[stack-x][gap-12] > :not(:last-child) {
+  margin-right: 96px;
+}
+
+[flex-row][gap-13] > :not(:last-child),
+[stack-h][gap-13] > :not(:last-child),
+[stack-x][gap-13] > :not(:last-child) {
+  margin-right: 104px;
+}
+
+[flex-row][gap-14] > :not(:last-child),
+[stack-h][gap-14] > :not(:last-child),
+[stack-x][gap-14] > :not(:last-child) {
+  margin-right: 112px;
+}
+
+[flex-row][gap-16] > :not(:last-child),
+[stack-h][gap-16] > :not(:last-child),
+[stack-x][gap-16] > :not(:last-child) {
+  margin-right: 128px;
+}
+
+[flex-row][gap-18] > :not(:last-child),
+[stack-h][gap-18] > :not(:last-child),
+[stack-x][gap-18] > :not(:last-child) {
+  margin-right: 144px;
+}
+
+[flex-row][gap-20] > :not(:last-child),
+[stack-h][gap-20] > :not(:last-child),
+[stack-x][gap-20] > :not(:last-child) {
+  margin-right: 160px;
+}
+
+[flex-row][gap-24] > :not(:last-child),
+[stack-h][gap-24] > :not(:last-child),
+[stack-x][gap-24] > :not(:last-child) {
+  margin-right: 192px;
+}
+
+[flex-row][gap-28] > :not(:last-child),
+[stack-h][gap-28] > :not(:last-child),
+[stack-x][gap-28] > :not(:last-child) {
+  margin-right: 224px;
+}
+
+[flex-row][gap-32] > :not(:last-child),
+[stack-h][gap-32] > :not(:last-child),
+[stack-x][gap-32] > :not(:last-child) {
+  margin-right: 256px;
+}
+
 [width-0] {
   width: 0px;
 }

@@ -267,6 +267,40 @@ $grid-space-scale: 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5 6 7 8 9 10 11 12 13 14 16 18 
   }
 }
 
+
+// make gap-* work for vertical stacks
+[flex-col],
+[stack-v],
+[stack-y] {
+  
+  @each $n in $grid-space-scale {
+    // escape decimal points so they make valid attribute selectors
+    $n-str: str-replace(inspect($n), ".", "\\.");
+    $len: $n * $grid-unit;
+    
+    &[gap-#{$n-str}] > :not(:last-child) {
+      margin-bottom: $len;
+    }
+  }
+}
+
+// make gap-* work for horizontal stacks
+[flex-row],
+[stack-h],
+[stack-x] {
+  @each $n in $grid-space-scale {
+    // escape decimal points so they make valid attribute selectors
+    $n-str: str-replace(inspect($n), ".", "\\.");
+    $len: $n * $grid-unit;
+    
+    &[gap-#{$n-str}] > :not(:last-child) {
+      margin-right: $len;
+    }
+  }
+}
+
+
+
 // TODO: adjust size scale for larger values
 $grid-size-scale: 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5 6 7 8 9 10 11 12 13 14 16 18 20 24 28 32;
 

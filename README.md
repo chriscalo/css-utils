@@ -73,9 +73,21 @@ Simplify flexbox layout:
   <span spacer></span> <!-- flex-grow: 1 -->
   <span shrink>Two</span> <!-- flex-shrink: 1; min-width: 0; min-height: 0; -->
 </div>
+<div flex-col>
+  <span shrink>One</span> <!-- flex-shrink: 1; min-width: 0; min-height: 0; -->
+  <span spacer></span> <!-- flex-grow: 1 -->
+  <span shrink>Two</span> <!-- flex-shrink: 1; min-width: 0; min-height: 0; -->
+</div>
 ```
 
-Helpers for grid layout:
+Synonyms for `flex-*` are `stack-*`:
+
+```text
+flex-row stack-h stack-x
+flex-col stack-v stack-y
+```
+
+There are helpers for grid layout:
 
 ```html
 <div grid gap-1>
@@ -119,6 +131,28 @@ gap-20   gap-x-20   gap-y-20
 gap-24   gap-x-24   gap-y-24
 gap-28   gap-x-28   gap-y-28
 gap-32   gap-x-32   gap-y-32
+```
+
+The `gap-*` attributes work on `flex-*` and `stack-*` elements, but only in the
+main axis direction. Note that `gap-x-*` and `gap-y-*` attributes have no effect
+on `flex-*` and `stack-*` elements.
+
+```html
+<div flex-row gap-1>
+  <span>One</span>
+  <!-- 8px gap -->
+  <span>Two</span>
+  <!-- 8px gap -->
+  <span>Two</span>
+</div>
+
+<div stack-y gap-1>
+  <span>One</span>
+  <!-- 8px gap -->
+  <span>Two</span>
+  <!-- 8px gap -->
+  <span>Two</span>
+</div>
 ```
 
 There are helpers for edge-pinning absolutely-positioned layers:
