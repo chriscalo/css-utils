@@ -30,7 +30,7 @@ For example:
 ```html
 <!-- notice the version is specified -->
 <link
-  href="https://unpkg.com/@chriscalo/css-utils@0.6.3/dist/css-utils.css"
+  href="https://unpkg.com/@chriscalo/css-utils@0.6.4/dist/css-utils.css"
   rel="stylesheet"
 />
 ```
@@ -82,12 +82,14 @@ Apply common layouts via `display` and `position` properties:
 Simplify flexbox layout:
 
 ```html
-<div flex-row> <!-- or stack-x or stack-h -->
+<!-- flex-row or stack-x or stack-h -->
+<div flex-row>
   <span grow shrink>Item</span>
   <span spacer></span> <!-- [spacer], [grow] { flex-grow: 1 } -->
   <span no-shrink>Item</span>
 </div>
-<div flex-col> <!-- or stack-y or stack-v -->
+<!-- flex-col or stack-y or stack-v -->
+<div flex-col>
   <span shrink no-grow>Item</span>
   <span spacer></span> <!-- [spacer], [grow] { flex-grow: 1 } -->
   <span grow shrink>Item</span>
@@ -283,10 +285,10 @@ Apply opacities:
 Resize icon fonts:
 
 ```html
-<i icon-xs class="material-icons icon">add</i> <!-- 16px -->
-<i icon-s class="material-icons icon">close</i> <!-- 20px -->
-<i icon-m class="material-icons icon">brush</i> <!-- 24px -->
-<i icon-l class="material-icons icon">notes</i> <!-- 28px -->
+<i icon-xs class="material-icons icon">add</i>    <!-- 16px -->
+<i icon-s class="material-icons icon">close</i>   <!-- 20px -->
+<i icon-m class="material-icons icon">brush</i>   <!-- 24px -->
+<i icon-l class="material-icons icon">notes</i>   <!-- 28px -->
 <i icon-xl class="material-icons icon">layers</i> <!-- 32px -->
 ```
 
