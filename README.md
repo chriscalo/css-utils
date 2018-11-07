@@ -49,9 +49,9 @@ Confused why a layout is doing what it's doing? Make the bounding boxes visible:
 ```html
 <!-- outline: solid 1px magenta -->
 <div outline>
-  <div outline>child one</div>
-  <div outline>child two</div>
-  <div outline>child two</div>
+  <div outline>child</div>
+  <div outline>child</div>
+  <div outline>child</div>
 </div>
 ```
 
@@ -95,7 +95,7 @@ There are helpers for grid layout:
 
 <div grid>
   <!-- will fill the entire grid -->
-  <span fill-grid>One</span>
+  <span fill-grid>Fill grid</span>
 </div>
 ```
 
@@ -136,19 +136,19 @@ on `flex-*` and `stack-*` elements.
 
 ```html
 <div flex-row gap-1>
-  <span>One</span>
+  <span>Item</span>
   <!-- 8px gap -->
-  <span>Two</span>
+  <span>Item</span>
   <!-- 8px gap -->
-  <span>Two</span>
+  <span>Item</span>
 </div>
 
 <div stack-y gap-1>
-  <span>One</span>
+  <span>Item</span>
   <!-- 8px gap -->
-  <span>Two</span>
+  <span>Item</span>
   <!-- 8px gap -->
-  <span>Two</span>
+  <span>Item</span>
 </div>
 ```
 
