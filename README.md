@@ -68,24 +68,21 @@ Apply common layouts via `display` and `position` properties:
 Simplify flexbox layout:
 
 ```html
-<div flex-row>
+<div flex-row> <!-- or stack-x or stack-h -->
   <span shrink>One</span> <!-- flex-shrink: 1; min-width: 0; min-height: 0; -->
   <span spacer></span> <!-- flex-grow: 1 -->
   <span shrink>Two</span> <!-- flex-shrink: 1; min-width: 0; min-height: 0; -->
 </div>
-<div flex-col>
+<div flex-col> <!-- or stack-y or stack-v -->
   <span shrink>One</span> <!-- flex-shrink: 1; min-width: 0; min-height: 0; -->
   <span spacer></span> <!-- flex-grow: 1 -->
   <span shrink>Two</span> <!-- flex-shrink: 1; min-width: 0; min-height: 0; -->
 </div>
 ```
 
-Synonyms for `flex-*` are `stack-*`:
+Note that synonyms for `flex-row` are `stack-h` and `stack-x`. Similarly,
+synonyms for `flex-col` are `stack-v` and `stack-y`.
 
-```text
-flex-row stack-h stack-x
-flex-col stack-v stack-y
-```
 
 There are helpers for grid layout:
 
