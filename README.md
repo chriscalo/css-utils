@@ -30,7 +30,7 @@ For example:
 ```html
 <!-- notice the version is specified -->
 <link
-  href="https://unpkg.com/@chriscalo/css-utils@0.6.4/dist/css-utils.css"
+  href="https://unpkg.com/@chriscalo/css-utils@0.6.5/dist/css-utils.css"
   rel="stylesheet"
 />
 ```
@@ -239,13 +239,33 @@ Apply padding and margin based on an 8px grid:
 <div margin-10></div>  <!-- margin: 80px -->
 ```
 
-But it's also possible to only apply horizontal or vertical padding:
+But it's also possible to apply padding and margin only to specific sides:
+
 ```html
-<div pad-x-0></div>   <!-- padding-left: 0; padding-right: 0; -->
-<div pad-y-0.5></div> <!-- padding-top: 4px; padding-bottom: 4px; -->
+<div pad-x-0></div>      <!-- padding-left: 0; padding-right: 0; -->
+<div pad-y-0.5></div>    <!-- padding-top: 4px; padding-bottom: 4px; -->
+<div pad-top-1></div>    <!-- padding-top: 8px; -->
+<div pad-t-1></div>      <!-- padding-top: 8px; -->
+<div pad-right-2></div>  <!-- padding-right: 16px; -->
+<div pad-r-2></div>      <!-- padding-right: 16px; -->
+<div pad-bottom-4></div> <!-- padding-bottom: 32px; -->
+<div pad-b-4></div>      <!-- padding-bottom: 32px; -->
+<div pad-left-8></div>   <!-- padding-left: 64px; -->
+<div pad-l-8></div>      <!-- padding-left: 64px; -->
+
+<div margin-x-0></div>      <!-- margin-left: 0; margin-right: 0; -->
+<div margin-y-0.5></div>    <!-- margin-top: 4px; margin-bottom: 4px; -->
+<div margin-top-1></div>    <!-- margin-top: 8px; -->
+<div margin-t-1></div>      <!-- margin-top: 8px; -->
+<div margin-right-2></div>  <!-- margin-right: 16px; -->
+<div margin-r-2></div>      <!-- margin-right: 16px; -->
+<div margin-bottom-4></div> <!-- margin-bottom: 32px; -->
+<div margin-b-4></div>      <!-- margin-bottom: 32px; -->
+<div margin-left-8></div>   <!-- margin-left: 64px; -->
+<div margin-l-8></div>      <!-- margin-left: 64px; -->
 ```
 
-Use the same system for height, width, or both via size:
+Use the same system for `height`, `width`, or both via `size`:
 
 ```html
 <div height-0.5></div> <!-- height: 4px; -->
@@ -260,6 +280,37 @@ height, or both:
 <div height-full></div> <!-- height: 100%; -->
 <div width-full></div>  <!-- width: 100%; -->
 <div size-full></div>   <!-- width: 100%; height: 100%; -->
+```
+
+The full scale of spacing and sizing values are:
+
+```text
+ 0    =>  0
+ 0.5  =>  4px
+ 1    =>  8px
+ 1.5  =>  12px
+ 2    =>  16px
+ 2.5  =>  20px
+ 3    =>  24px
+ 3.5  =>  28px
+ 4    =>  32px
+ 4.5  =>  36px
+ 5    =>  40px
+ 6    =>  48px
+ 7    =>  56px
+ 8    =>  64px
+ 9    =>  72px
+10    =>  80px
+11    =>  88px
+12    =>  96px
+13    =>  104px
+14    =>  112px
+16    =>  128px
+18    =>  144px
+20    =>  160px
+24    =>  192px
+28    =>  224px
+32    =>  256px
 ```
 
 Apply opacities:

@@ -247,8 +247,28 @@ $grid-space-scale: 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5 6 7 8 9 10 11 12 13 14 16 18 
     padding-right: $len;
   }
   
+  [pad-l-#{$n-str}],
+  [pad-left-#{$n-str}] {
+    padding-left: $len;
+  }
+  
+  [pad-r-#{$n-str}],
+  [pad-right-#{$n-str}] {
+    padding-right: $len;
+  }
+  
   [pad-y-#{$n-str}] {
     padding-top: $len;
+    padding-bottom: $len;
+  }
+  
+  [pad-t-#{$n-str}],
+  [pad-top-#{$n-str}] {
+    padding-top: $len;
+  }
+  
+  [pad-b-#{$n-str}],
+  [pad-bottom-#{$n-str}] {
     padding-bottom: $len;
   }
   
@@ -261,10 +281,31 @@ $grid-space-scale: 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5 6 7 8 9 10 11 12 13 14 16 18 
     margin-right: $len;
   }
   
+  [margin-l-#{$n-str}],
+  [margin-left-#{$n-str}] {
+    margin-left: $len;
+  }
+  
+  [margin-r-#{$n-str}],
+  [margin-right-#{$n-str}] {
+    margin-right: $len;
+  }
+  
   [margin-y-#{$n-str}] {
     margin-top: $len;
     margin-bottom: $len;
   }
+  
+  [margin-t-#{$n-str}],
+  [margin-top-#{$n-str}] {
+    margin-top: $len;
+  }
+  
+  [margin-b-#{$n-str}],
+  [margin-bottom-#{$n-str}] {
+    margin-top: $len;
+  }
+  
 }
 
 
