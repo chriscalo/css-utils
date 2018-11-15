@@ -30,7 +30,7 @@ For example:
 ```html
 <!-- notice the version is specified -->
 <link
-  href="https://unpkg.com/@chriscalo/css-utils@0.12.0/dist/css-utils.css"
+  href="https://unpkg.com/@chriscalo/css-utils@0.13.0/dist/css-utils.css"
   rel="stylesheet"
 />
 ```
@@ -387,17 +387,22 @@ Prevent long words from overflowing their containers:
 <span break-word></span>
 ```
 
-Apply vertical alignment to inline elements:
+Apply horizontal and vertical alignment to text:
 
 ```html
-<span align-baseline></span>
-<span align-sub></span>
-<span align-super></span>
-<span align-text-top></span>
-<span align-text-bottom></span>
-<span align-middle></span>
-<span align-top></span>
-<span align-bottom></span>
+<span align-left></span>         <!-- or text-align-left -->
+<span align-center></span>       <!-- or text-align-center -->
+<span align-right></span>        <!-- or text-align-right -->
+<span align-justify></span>      <!-- or text-align-justify -->
+
+<span align-baseline></span>     <!-- or text-align-baseline -->
+<span align-sub></span>          <!-- or text-align-sub -->
+<span align-super></span>        <!-- or text-align-super -->
+<span align-text-top></span>     <!-- or text-align-text-top -->
+<span align-text-bottom></span>  <!-- or text-align-text-bottom -->
+<span align-middle></span>       <!-- or text-align-middle -->
+<span align-top></span>          <!-- or text-align-top -->
+<span align-bottom></span>       <!-- or text-align-bottom -->
 ```
 
 Apply borders:

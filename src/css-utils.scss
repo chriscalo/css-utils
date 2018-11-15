@@ -463,10 +463,19 @@ $text-scale: (
   }
 }
 
+// TODO: remove the align-* selectors?
 @each $value in (baseline sub super text-top text-bottom middle top bottom) {
   [text-align-#{$value}],
   [align-#{$value}] {
     vertical-align: $value;
+  }
+}
+
+// TODO: remove the align-* selectors?
+@each $value in (left center right justify) {
+  [text-align-#{$value}],
+  [align-#{$value}] {
+    text-align: $value;
   }
 }
 

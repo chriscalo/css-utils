@@ -3743,6 +3743,26 @@
   vertical-align: bottom;
 }
 
+[text-align-left],
+[align-left] {
+  text-align: left;
+}
+
+[text-align-center],
+[align-center] {
+  text-align: center;
+}
+
+[text-align-right],
+[align-right] {
+  text-align: right;
+}
+
+[text-align-justify],
+[align-justify] {
+  text-align: justify;
+}
+
 [break-word] {
   overflow-wrap: break-word;
 }
