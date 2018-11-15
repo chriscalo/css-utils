@@ -30,7 +30,7 @@ For example:
 ```html
 <!-- notice the version is specified -->
 <link
-  href="https://unpkg.com/@chriscalo/css-utils@0.10.0/dist/css-utils.css"
+  href="https://unpkg.com/@chriscalo/css-utils@0.11.0/dist/css-utils.css"
   rel="stylesheet"
 />
 ```
@@ -365,6 +365,12 @@ Apply text transforms:
 <span capitalize></span>
 <span uppercase></span>
 <span lowercase></span>
+```
+
+Prevent long words from overflowing their containers:
+
+```html
+<span break-word></span>
 ```
 
 Apply vertical alignment to inline elements:
