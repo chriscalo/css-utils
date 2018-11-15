@@ -30,7 +30,7 @@ For example:
 ```html
 <!-- notice the version is specified -->
 <link
-  href="https://unpkg.com/@chriscalo/css-utils@0.9.0/dist/css-utils.css"
+  href="https://unpkg.com/@chriscalo/css-utils@0.10.0/dist/css-utils.css"
   rel="stylesheet"
 />
 ```
@@ -76,7 +76,8 @@ Apply common layouts via `display` and `position` properties:
 <div block></div>
 <div inline-block></div>
 <div grid></div>
-<div absolute></div>
+<div absolute></div> <!-- or `positioned` -->
+<div relative></div>
 <div fixed></div>
 ```
 
