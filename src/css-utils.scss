@@ -387,7 +387,7 @@ $self-alignment: (
 @each $name, $value in $self-alignment {
   [self-#{$name}],
   [self-align-#{$name}] {
-    self-align: $value;
+    align-self: $value;
   }
 }
 

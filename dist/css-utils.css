@@ -2723,27 +2723,27 @@
 
 [self-start],
 [self-align-start] {
-  self-align: flex-start;
+  align-self: flex-start;
 }
 
 [self-center],
 [self-align-center] {
-  self-align: center;
+  align-self: center;
 }
 
 [self-end],
 [self-align-end] {
-  self-align: flex-end;
+  align-self: flex-end;
 }
 
 [self-baseline],
 [self-align-baseline] {
-  self-align: baseline;
+  align-self: baseline;
 }
 
 [self-fill],
 [self-align-fill] {
-  self-align: stretch;
+  align-self: stretch;
 }
 
 [width-0] {

@@ -30,7 +30,7 @@ For example:
 ```html
 <!-- notice the version is specified -->
 <link
-  href="https://unpkg.com/@chriscalo/css-utils@0.15.0/dist/css-utils.css"
+  href="https://unpkg.com/@chriscalo/css-utils@0.15.1/dist/css-utils.css"
   rel="stylesheet"
 />
 ```
