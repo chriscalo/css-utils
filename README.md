@@ -30,7 +30,7 @@ For example:
 ```html
 <!-- notice the version is specified -->
 <link
-  href="https://unpkg.com/@chriscalo/css-utils@0.13.0/dist/css-utils.css"
+  href="https://unpkg.com/@chriscalo/css-utils@0.14.0/dist/css-utils.css"
   rel="stylesheet"
 />
 ```
@@ -79,6 +79,26 @@ Apply common layouts via `display` and `position` properties:
 <div absolute></div> <!-- or `positioned` -->
 <div relative></div>
 <div fixed></div>
+```
+
+Nudge in-flow elements:
+
+```html
+<span nudge-down-1></span>   <!-- down 1px -->
+<span nudge-up-2></span>     <!-- up 2px -->
+<span nudge-right-3></span>  <!-- right 3px -->
+<span nudge-left-4></span>   <!-- left 4px -->
+```
+
+The full list of nudge values are:
+
+```text
+nudge-down-1  nudge-up-1  nudge-left-1  nudge-right-1
+nudge-down-2  nudge-up-2  nudge-left-2  nudge-right-2
+nudge-down-3  nudge-up-3  nudge-left-3  nudge-right-3
+nudge-down-4  nudge-up-4  nudge-left-4  nudge-right-4
+nudge-down-6  nudge-up-6  nudge-left-6  nudge-right-6
+nudge-down-8  nudge-up-8  nudge-left-8  nudge-right-8
 ```
 
 Simplify flexbox layout:

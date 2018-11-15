@@ -316,6 +316,33 @@ $grid-space-scale: 0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5 6 7 8 9 10 11 12 13 14 16 18 
   
 }
 
+$nudge-scale: 1 2 3 4 6 8;
+
+@each $n in $nudge-scale {
+  $n-str: str-replace(inspect($n), ".", "\\.");
+  $len: $n * 1px;
+  
+  [nudge-down-#{$n}] {
+    position: relative;
+    top: $len;
+  }
+  
+  [nudge-up-#{$n}] {
+    position: relative;
+    top: $len * -1;
+  }
+  
+  [nudge-right-#{$n}] {
+    position: relative;
+    left: $len;
+  }
+  
+  [nudge-left-#{$n}] {
+    position: relative;
+    left: $len * -1;
+  }
+}
+
 
 // make gap-* work for vertical stacks
 [flex-col],

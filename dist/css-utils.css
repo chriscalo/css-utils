@@ -2289,6 +2289,126 @@
   margin-top: 256px;
 }
 
+[nudge-down-1] {
+  position: relative;
+  top: 1px;
+}
+
+[nudge-up-1] {
+  position: relative;
+  top: -1px;
+}
+
+[nudge-right-1] {
+  position: relative;
+  left: 1px;
+}
+
+[nudge-left-1] {
+  position: relative;
+  left: -1px;
+}
+
+[nudge-down-2] {
+  position: relative;
+  top: 2px;
+}
+
+[nudge-up-2] {
+  position: relative;
+  top: -2px;
+}
+
+[nudge-right-2] {
+  position: relative;
+  left: 2px;
+}
+
+[nudge-left-2] {
+  position: relative;
+  left: -2px;
+}
+
+[nudge-down-3] {
+  position: relative;
+  top: 3px;
+}
+
+[nudge-up-3] {
+  position: relative;
+  top: -3px;
+}
+
+[nudge-right-3] {
+  position: relative;
+  left: 3px;
+}
+
+[nudge-left-3] {
+  position: relative;
+  left: -3px;
+}
+
+[nudge-down-4] {
+  position: relative;
+  top: 4px;
+}
+
+[nudge-up-4] {
+  position: relative;
+  top: -4px;
+}
+
+[nudge-right-4] {
+  position: relative;
+  left: 4px;
+}
+
+[nudge-left-4] {
+  position: relative;
+  left: -4px;
+}
+
+[nudge-down-6] {
+  position: relative;
+  top: 6px;
+}
+
+[nudge-up-6] {
+  position: relative;
+  top: -6px;
+}
+
+[nudge-right-6] {
+  position: relative;
+  left: 6px;
+}
+
+[nudge-left-6] {
+  position: relative;
+  left: -6px;
+}
+
+[nudge-down-8] {
+  position: relative;
+  top: 8px;
+}
+
+[nudge-up-8] {
+  position: relative;
+  top: -8px;
+}
+
+[nudge-right-8] {
+  position: relative;
+  left: 8px;
+}
+
+[nudge-left-8] {
+  position: relative;
+  left: -8px;
+}
+
 [flex-col][gap-0] > :not(:last-child),
 [stack-v][gap-0] > :not(:last-child),
 [stack-y][gap-0] > :not(:last-child) {
