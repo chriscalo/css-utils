@@ -2721,6 +2721,31 @@
   margin-right: 256px;
 }
 
+[self-start],
+[self-align-start] {
+  self-align: flex-start;
+}
+
+[self-center],
+[self-align-center] {
+  self-align: center;
+}
+
+[self-end],
+[self-align-end] {
+  self-align: flex-end;
+}
+
+[self-baseline],
+[self-align-baseline] {
+  self-align: baseline;
+}
+
+[self-fill],
+[self-align-fill] {
+  self-align: stretch;
+}
+
 [width-0] {
   width: 0px;
 }

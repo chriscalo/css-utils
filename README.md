@@ -30,7 +30,7 @@ For example:
 ```html
 <!-- notice the version is specified -->
 <link
-  href="https://unpkg.com/@chriscalo/css-utils@0.14.0/dist/css-utils.css"
+  href="https://unpkg.com/@chriscalo/css-utils@0.15.0/dist/css-utils.css"
   rel="stylesheet"
 />
 ```
@@ -120,6 +120,18 @@ Simplify flexbox layout:
 
 Note that synonyms for `flex-row` are `stack-h` and `stack-x`. Similarly,
 synonyms for `flex-col` are `stack-v` and `stack-y`.
+
+There are also helpers for flex item alignment:
+
+```html
+<div stack-v gap-1>
+  <span self-start>item</span>     <!-- self-align: flex-start -->
+  <span self-center>item</span>    <!-- self-align: center -->
+  <span self-end>item</span>       <!-- self-align: flex-end -->
+  <span self-baseline>item</span>  <!-- self-align: baseline -->
+  <span self-fill>item</span>      <!-- self-align: stretch -->
+</div>
+```
 
 
 There are helpers for grid layout:
