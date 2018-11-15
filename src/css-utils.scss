@@ -36,6 +36,10 @@
   outline-offset: -1px; // inset instead of outset
 }
 
+[hidden] {
+  display: none;
+}
+
 [block] {
   display: block;
 }

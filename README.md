@@ -56,7 +56,7 @@ reference the stylesheet from your HTML:
 Otherwise, you'll need to tweak the `href` path.
 
 
-## Examples
+## Usage
 
 Confused why a layout is doing what it's doing? Make the bounding boxes visible:
 
@@ -72,6 +72,7 @@ Confused why a layout is doing what it's doing? Make the bounding boxes visible:
 Apply common layouts via `display` and `position` properties:
 
 ```html
+<div hidden></div>
 <div block></div>
 <div inline-block></div>
 <div grid></div>
