@@ -474,6 +474,25 @@ $text-scale: (
   overflow-wrap: break-word;
 }
 
+$text-weight-scale: (
+  "hairline": 100,
+  "thin": 200,
+  "light": 300,
+  "normal": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+  "extrabold": 800,
+  "black": 900,
+);
+
+@each $name, $value in $text-weight-scale {
+  [text-weight-#{$name}] {
+    font-weight: $value;
+  }
+}
+
+
 
 /*============================================================================*\
   BORDERS

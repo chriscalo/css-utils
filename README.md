@@ -30,7 +30,7 @@ For example:
 ```html
 <!-- notice the version is specified -->
 <link
-  href="https://unpkg.com/@chriscalo/css-utils@0.11.0/dist/css-utils.css"
+  href="https://unpkg.com/@chriscalo/css-utils@0.12.0/dist/css-utils.css"
   rel="stylesheet"
 />
 ```
@@ -357,6 +357,20 @@ Resize text:
 <p text-xl></p>   <!-- font-size: 24px -->
 <p text-xxl></p>  <!-- font-size: 32px -->
 <p text-xxxl></p> <!-- font-size: 48px -->
+```
+
+Set text weights:
+
+```html
+<p text-weight-hairline></p>  <!-- font-weight: 100; -->
+<p text-weight-thin></p>      <!-- font-weight: 200; -->
+<p text-weight-light></p>     <!-- font-weight: 300; -->
+<p text-weight-normal></p>    <!-- font-weight: 400; -->
+<p text-weight-medium></p>    <!-- font-weight: 500; -->
+<p text-weight-semibold></p>  <!-- font-weight: 600; -->
+<p text-weight-bold></p>      <!-- font-weight: 700; -->
+<p text-weight-extrabold></p> <!-- font-weight: 800; -->
+<p text-weight-black></p>     <!-- font-weight: 900; -->
 ```
 
 Apply text transforms:
