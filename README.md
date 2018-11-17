@@ -712,3 +712,10 @@ npm publish
 
 Not recommended. There are no tests, and there's no guarantee that these
 attribute names don't conflict with other libraries.
+
+
+# Inspiration
+
+Heavily inspired by the utility-first CSS framework [Tailwind][tailwind].
+
+[tailwind]: https://tailwindcss.com/
