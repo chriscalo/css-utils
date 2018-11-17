@@ -13,6 +13,7 @@
   }
 }
 
+// TODO: bg:reset or bg:none?
 [reset],
 [button-reset] {
   background: none;
@@ -30,6 +31,7 @@
   LAYOUT
 \*============================================================================*/
 
+// TODO: outline:cyan, etc
 [debug],
 [outline] {
   outline: solid 1px magenta;
@@ -57,27 +59,26 @@
   grid-column: 1 / -1;
 }
 
+[container],
+[relative] {
+  position: relative;
+}
+
 [positioned],
 [absolute] {
   position: absolute;
-}
-
-[relative] {
-  position: relative;
 }
 
 [fixed] {
   position: fixed;
 }
 
+// TODO: [content:center]?
+[content\:center-xy],
 [center-xy] {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-[spacer] {
-  flex-grow: 1;
 }
 
 
@@ -171,6 +172,7 @@
   flex-direction: row;
 }
 
+[spacer],
 [grow] {
   flex-grow: 1;
 }
@@ -189,35 +191,122 @@
   flex-shrink: 0;
 }
 
-[items-center] {
-  align-items: center;
-}
+/*============================================================================*\
+  Flex main-axis alignment
+\*============================================================================*/
 
-[content-flex-start],
-[content-start] {
+[main\:start],
+[items\:main-start],
+[items\:line-start] {
   justify-content: flex-start;
 }
 
-[content-flex-end],
-[content-end] {
-  justify-content: flex-end;
-}
-
-[content-center] {
+[main\:center],
+[items\:main-center],
+[items\:line-center] {
   justify-content: center;
 }
 
-[content-space-between],
-[content-between],
-[content-distribute] {
+[main\:end],
+[items\:main-end],
+[items\:line-end] {
+  justify-content: flex-end;
+}
+
+[main\:distribute],
+[items\:main-distribute],
+[items\:line-distribute] {
   justify-content: space-between;
 }
 
-[content-space-around],
-[content-around] {
+[main\:even],
+[items\:main-even],
+[items\:line-even] {
   justify-content: space-around;
 }
 
+/*============================================================================*\
+  Flex cross-axis alignment
+\*============================================================================*/
+
+[cross\:start],
+[items\:cross-start] {
+  align-items: flex-start;
+}
+
+[cross\:center],
+[items\:cross-center] {
+  align-items: center;
+}
+
+[cross\:end],
+[items\:cross-end] {
+  align-items: flex-end;
+}
+
+[cross\:baseline],
+[items\:cross-baseline] {
+  align-items: baseline;
+}
+
+[cross\:fill],
+[items\:cross-fill] {
+  align-items: stretch;
+}
+
+/*============================================================================*\
+  Flex item overflow along main-axis
+\*============================================================================*/
+
+[items\:fit] {
+  flex-wrap: nowrap;
+  & > *:not(:last-child) {
+    // FIXME: need to figure out row vs column
+    // min-width: 0 or min-height: 0
+  }
+}
+
+[items\:wrap],
+[items\:wrap-after] {
+  flex-wrap: wrap;
+}
+
+[items\:wrap-reverse],
+[items\:wrap-before] {
+  flex-wrap: wrap-reverse;
+}
+
+[items\:overflow] {
+  flex-wrap: nowrap;
+}
+
+/*============================================================================*\
+  Flex line alignment
+\*============================================================================*/
+
+[lines\:start] {
+  align-content: flex-start;
+}
+
+[lines\:center] {
+  align-content: center;
+}
+
+[lines\:end] {
+  align-content: flex-end;
+}
+
+[lines\:distribute] {
+  align-content: space-between;
+}
+
+[lines\:even] {
+  align-content: space-around;
+}
+
+[lines\:fill] {
+  align-content: stretch;
+}
 
 
 /*============================================================================*\

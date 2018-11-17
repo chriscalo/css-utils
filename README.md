@@ -77,7 +77,7 @@ Apply common layouts via `display` and `position` properties:
 <div inline-block></div>
 <div grid></div>
 <div absolute></div> <!-- or `positioned` -->
-<div relative></div>
+<div relative></div> <!-- or `container` -->
 <div fixed></div>
 ```
 
@@ -248,11 +248,51 @@ There are helpers for aligning flex content:
 <div flex-row content-space-around></div>
 ```
 
-Including a centering helper:
+Main-axis alignment (2nd and 3rd columns are aliases):
+
+```text
+main:start       items:main-start       items:line-start
+main:center      items:main-center      items:line-center
+main:end         items:main-end         items:line-end
+main:distribute  items:main-distribute  items:line-distribute
+main:even        items:main-even        items:line-even
+```
+
+Cross-axis alignment (2nd column is aliases):
+
+```text
+cross:start     items:cross-start
+cross:center    items:cross-center
+cross:end       items:cross-end
+cross:baseline  items:cross-baseline
+cross:fill      items:cross-fill
+```
+
+Flex item overflow along main-axis:
+
+```text
+items:fit
+items:wrap          items:wrap-after
+items:wrap-reverse  items:wrap-before
+items:overflow
+```
+
+Flex line alignment:
+
+```text
+lines:start
+lines:center
+lines:end
+lines:distribute
+lines:even
+lines:fill
+```
+
+To center content, use:
 
 ```html
  <!-- Set an explicit height if it needs to be larger than its content -->
-<div center-xy>
+<div center-xy> <!-- or `content:center-xy` -->
   <div>I'm centered!</div>
 </div>
 ```
