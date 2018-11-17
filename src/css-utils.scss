@@ -158,15 +158,23 @@
   FLEXBOX
 \*============================================================================*/
 
+[flex\:col],
 [flex-col],
+[stack\:v],
 [stack-v],
+[stack\:y],
 [stack-y] {
   display: flex;
   flex-direction: column;
 }
 
+[flex],
+[flex\:row],
 [flex-row],
+[stack],
+[stack\:h],
 [stack-h],
+[stack\:x],
 [stack-x] {
   display: flex;
   flex-direction: row;
@@ -262,7 +270,8 @@
   flex-wrap: nowrap;
   & > *:not(:last-child) {
     // FIXME: need to figure out row vs column
-    // min-width: 0 or min-height: 0
+    min-width: 0;
+    min-height: 0;
   }
 }
 
@@ -465,7 +474,7 @@ $nudge-scale: 1 2 3 4 6 8;
 }
 
 
-$self-alignment: (
+$self-cross-alignment: (
   "start": flex-start,
   "center": center,
   "end": flex-end,
@@ -473,13 +482,15 @@ $self-alignment: (
   "fill": stretch,
 );
 
-@each $name, $value in $self-alignment {
+// cross-axis self alignment
+@each $name, $value in $self-cross-alignment {
+  [self\:#{$name}],
+  [self\:cross-#{$name}],
   [self-#{$name}],
   [self-align-#{$name}] {
     align-self: $value;
   }
 }
-
 
 
 // TODO: adjust size scale for larger values
@@ -596,6 +607,9 @@ $text-scale: (
 }
 
 // TODO: remove the align-* selectors?
+// TODO: text-align-text-top => text-align:ascender
+// TODO: text-align-text-bottom => text-align:descender
+// TODO: text-align: $value;
 @each $value in (baseline sub super text-top text-bottom middle top bottom) {
   [text-align-#{$value}],
   [align-#{$value}] {
@@ -604,6 +618,7 @@ $text-scale: (
 }
 
 // TODO: remove the align-* selectors?
+// TODO: text-align: $value;
 @each $value in (left center right justify) {
   [text-align-#{$value}],
   [align-#{$value}] {

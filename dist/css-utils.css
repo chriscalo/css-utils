@@ -143,15 +143,23 @@
 /*============================================================================*\
   FLEXBOX
 \*============================================================================*/
+[flex\:col],
 [flex-col],
+[stack\:v],
 [stack-v],
+[stack\:y],
 [stack-y] {
   display: flex;
   flex-direction: column;
 }
 
+[flex],
+[flex\:row],
 [flex-row],
+[stack],
+[stack\:h],
 [stack-h],
+[stack\:x],
 [stack-x] {
   display: flex;
   flex-direction: row;
@@ -242,6 +250,10 @@
 \*============================================================================*/
 [items\:fit] {
   flex-wrap: nowrap;
+}
+[items\:fit] > *:not(:last-child) {
+  min-width: 0;
+  min-height: 0;
 }
 
 [items\:wrap],
@@ -2800,26 +2812,36 @@
   margin-right: 256px;
 }
 
+[self\:start],
+[self\:cross-start],
 [self-start],
 [self-align-start] {
   align-self: flex-start;
 }
 
+[self\:center],
+[self\:cross-center],
 [self-center],
 [self-align-center] {
   align-self: center;
 }
 
+[self\:end],
+[self\:cross-end],
 [self-end],
 [self-align-end] {
   align-self: flex-end;
 }
 
+[self\:baseline],
+[self\:cross-baseline],
 [self-baseline],
 [self-align-baseline] {
   align-self: baseline;
 }
 
+[self\:fill],
+[self\:cross-fill],
 [self-fill],
 [self-align-fill] {
   align-self: stretch;

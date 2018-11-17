@@ -30,7 +30,7 @@ For example:
 ```html
 <!-- notice the version is specified -->
 <link
-  href="https://unpkg.com/@chriscalo/css-utils@0.16.0/dist/css-utils.css"
+  href="https://unpkg.com/@chriscalo/css-utils@0.17.0/dist/css-utils.css"
   rel="stylesheet"
 />
 ```
@@ -58,6 +58,10 @@ Otherwise, you'll need to tweak the `href` path.
 
 ## Usage
 
+Here are usage examples to explain the API.
+
+### Layout debugging
+
 Confused why a layout is doing what it's doing? Make the bounding boxes visible:
 
 ```html
@@ -69,17 +73,21 @@ Confused why a layout is doing what it's doing? Make the bounding boxes visible:
 </div>
 ```
 
-Apply common layouts via `display` and `position` properties:
+### Layout settings
+
+Apply common layouts:
 
 ```html
 <div hidden></div>
 <div block></div>
 <div inline-block></div>
 <div grid></div>
-<div absolute></div> <!-- or `positioned` -->
-<div relative></div> <!-- or `container` -->
+<div relative></div> or <div container></div>
+<div absolute></div> or <div positioned></div>
 <div fixed></div>
 ```
+
+### Nudging
 
 Nudge in-flow elements:
 
@@ -101,106 +109,7 @@ nudge-down-6  nudge-up-6  nudge-left-6  nudge-right-6
 nudge-down-8  nudge-up-8  nudge-left-8  nudge-right-8
 ```
 
-Simplify flexbox layout:
-
-```html
-<!-- flex-row or stack-x or stack-h -->
-<div flex-row>
-  <span grow shrink>Item</span>
-  <span spacer></span> <!-- [spacer], [grow] { flex-grow: 1 } -->
-  <span no-shrink>Item</span>
-</div>
-<!-- flex-col or stack-y or stack-v -->
-<div flex-col>
-  <span shrink no-grow>Item</span>
-  <span spacer></span> <!-- [spacer], [grow] { flex-grow: 1 } -->
-  <span grow shrink>Item</span>
-</div>
-```
-
-Note that synonyms for `flex-row` are `stack-h` and `stack-x`. Similarly,
-synonyms for `flex-col` are `stack-v` and `stack-y`.
-
-There are also helpers for flex item alignment:
-
-```html
-<div stack-v gap-1>
-  <span self-start>item</span>     <!-- self-align: flex-start -->
-  <span self-center>item</span>    <!-- self-align: center -->
-  <span self-end>item</span>       <!-- self-align: flex-end -->
-  <span self-baseline>item</span>  <!-- self-align: baseline -->
-  <span self-fill>item</span>      <!-- self-align: stretch -->
-</div>
-```
-
-
-There are helpers for grid layout:
-
-```html
-<div grid gap-1>
-  <span>One</span>
-   <!-- 8px gap here -->
-  <span>Two</span>
-</div>
-
-<div grid>
-  <!-- will fill the entire grid -->
-  <span fill-grid>Fill grid</span>
-</div>
-```
-
-All of the possible values for grid gaps are:
-
-```text
-gap-0    gap-x-0    gap-y-0
-gap-0.5  gap-x-0.5  gap-y-0.5
-gap-1    gap-x-1    gap-y-1
-gap-1.5  gap-x-1.5  gap-y-1.5
-gap-2    gap-x-2    gap-y-2
-gap-2.5  gap-x-2.5  gap-y-2.5
-gap-3    gap-x-3    gap-y-3
-gap-3.5  gap-x-3.5  gap-y-3.5
-gap-4    gap-x-4    gap-y-4
-gap-4.5  gap-x-4.5  gap-y-4.5
-gap-5    gap-x-5    gap-y-5
-gap-6    gap-x-6    gap-y-6
-gap-7    gap-x-7    gap-y-7
-gap-8    gap-x-8    gap-y-8
-gap-9    gap-x-9    gap-y-9
-gap-10   gap-x-10   gap-y-10
-gap-11   gap-x-11   gap-y-11
-gap-12   gap-x-12   gap-y-12
-gap-13   gap-x-13   gap-y-13
-gap-14   gap-x-14   gap-y-14
-gap-16   gap-x-16   gap-y-16
-gap-18   gap-x-18   gap-y-18
-gap-20   gap-x-20   gap-y-20
-gap-24   gap-x-24   gap-y-24
-gap-28   gap-x-28   gap-y-28
-gap-32   gap-x-32   gap-y-32
-```
-
-The `gap-*` attributes work on `flex-*` and `stack-*` elements, but only in the
-main axis direction. Note that `gap-x-*` and `gap-y-*` attributes have no effect
-on `flex-*` and `stack-*` elements.
-
-```html
-<div flex-row gap-1>
-  <span>Item</span>
-  <!-- 8px gap -->
-  <span>Item</span>
-  <!-- 8px gap -->
-  <span>Item</span>
-</div>
-
-<div stack-y gap-1>
-  <span>Item</span>
-  <!-- 8px gap -->
-  <span>Item</span>
-  <!-- 8px gap -->
-  <span>Item</span>
-</div>
-```
+### Edge pinning for positioned layers
 
 There are helpers for edge-pinning absolutely-positioned layers:
 
@@ -238,14 +147,78 @@ unpin-x
 unpin-y
 ```
 
-There are helpers for aligning flex content:
+### Flexbox layout
+
+Simplify flexbox layout:
 
 ```html
-<div flex-row content-start></div>
-<div flex-row content-end></div>
-<div flex-row content-center></div>
-<div flex-row content-distribute></div>
-<div flex-row content-space-around></div>
+<!-- flex-row or stack-x or stack-h -->
+<div flex-row>
+  <span grow shrink>Item</span>
+  <span spacer></span> <!-- [spacer], [grow] { flex-grow: 1 } -->
+  <span no-shrink>Item</span>
+</div>
+
+<!-- flex-col or stack-y or stack-v -->
+<div flex-col>
+  <span shrink no-grow>Item</span>
+  <span spacer></span> <!-- [spacer], [grow] { flex-grow: 1 } -->
+  <span grow shrink>Item</span>
+</div>
+```
+
+Synonyms for `flex-row` are `stack-h` and `stack-x`. Similarly, synonyms for
+`flex-col` are `stack-v` and `stack-y`.
+
+It's possible to set gaps between flex items:
+
+```html
+<div flex-row gap-1>
+  <span>Item</span>
+  <!-- 8px gap -->
+  <span>Item</span>
+  <!-- 8px gap -->
+  <span>Item</span>
+</div>
+
+<div stack-y gap-0.5>
+  <span>Item</span>
+  <!-- 4px gap -->
+  <span>Item</span>
+  <!-- 4px gap -->
+  <span>Item</span>
+</div>
+```
+
+All of the possible values for flex gaps are:
+
+```text
+gap-0
+gap-0.5
+gap-1
+gap-1.5
+gap-2
+gap-2.5
+gap-3
+gap-3.5
+gap-4
+gap-4.5
+gap-5
+gap-6
+gap-7
+gap-8
+gap-9
+gap-10
+gap-11
+gap-12
+gap-13
+gap-14
+gap-16
+gap-18
+gap-20
+gap-24
+gap-28
+gap-32
 ```
 
 Main-axis alignment (2nd and 3rd columns are aliases):
@@ -288,7 +261,74 @@ lines:even
 lines:fill
 ```
 
-To center content, use:
+Helpers for flex item cross-axis alignment:
+
+```html
+<div stack-v gap-1>
+  <span self:cross-start>item</span>     <!-- align-self: flex-start -->
+  <span self:cross-center>item</span>    <!-- align-self: center -->
+  <span self:cross-end>item</span>       <!-- align-self: flex-end -->
+  <span self:cross-baseline>item</span>  <!-- align-self: baseline -->
+  <span self:cross-fill>item</span>      <!-- align-self: stretch -->
+</div>
+```
+
+
+### Grid layout
+
+Helpers for grid layout:
+
+```html
+<div grid gap-1>
+  <span>One</span>
+   <!-- 8px gap here -->
+  <span>Two</span>
+</div>
+```
+
+All of the possible values for grid gaps are:
+
+```text
+gap-0    gap-x-0    gap-y-0
+gap-0.5  gap-x-0.5  gap-y-0.5
+gap-1    gap-x-1    gap-y-1
+gap-1.5  gap-x-1.5  gap-y-1.5
+gap-2    gap-x-2    gap-y-2
+gap-2.5  gap-x-2.5  gap-y-2.5
+gap-3    gap-x-3    gap-y-3
+gap-3.5  gap-x-3.5  gap-y-3.5
+gap-4    gap-x-4    gap-y-4
+gap-4.5  gap-x-4.5  gap-y-4.5
+gap-5    gap-x-5    gap-y-5
+gap-6    gap-x-6    gap-y-6
+gap-7    gap-x-7    gap-y-7
+gap-8    gap-x-8    gap-y-8
+gap-9    gap-x-9    gap-y-9
+gap-10   gap-x-10   gap-y-10
+gap-11   gap-x-11   gap-y-11
+gap-12   gap-x-12   gap-y-12
+gap-13   gap-x-13   gap-y-13
+gap-14   gap-x-14   gap-y-14
+gap-16   gap-x-16   gap-y-16
+gap-18   gap-x-18   gap-y-18
+gap-20   gap-x-20   gap-y-20
+gap-24   gap-x-24   gap-y-24
+gap-28   gap-x-28   gap-y-28
+gap-32   gap-x-32   gap-y-32
+```
+
+Force a grid item to fill the grid:
+
+```html
+<div grid>
+  <!-- will fill the entire grid -->
+  <span fill-grid>Fill grid</span>
+</div>
+```
+
+### Layout utilities
+
+To center content:
 
 ```html
  <!-- Set an explicit height if it needs to be larger than its content -->
@@ -296,6 +336,8 @@ To center content, use:
   <div>I'm centered!</div>
 </div>
 ```
+
+### Spacing and sizing
 
 Apply padding and margin based on an 8px grid:
 
@@ -387,6 +429,8 @@ The full scale of spacing and sizing values are:
 32    =>  256px
 ```
 
+### Opacity
+
 Apply opacities:
 
 ```html
@@ -407,6 +451,8 @@ Apply opacities:
 <div opacity-full></div> <!-- opacity: 1 -->
 ```
 
+### Icons
+
 Resize icon fonts:
 
 ```html
@@ -416,6 +462,8 @@ Resize icon fonts:
 <i icon-l class="material-icons icon">notes</i>   <!-- 28px -->
 <i icon-xl class="material-icons icon">layers</i> <!-- 32px -->
 ```
+
+### Typography
 
 Resize text:
 
@@ -477,18 +525,6 @@ Apply horizontal and vertical alignment to text:
 <span align-bottom></span>       <!-- or text-align-bottom -->
 ```
 
-Apply borders:
-
-```html
-<div stroke></div>
-<div stroke-y></div> <!-- top and bottom -->
-<div stroke-x></div> <!-- left and right -->
-<div stroke-top></div>
-<div stroke-right></div>
-<div stroke-bottom></div>
-<div stroke-left></div>
-```
-
 Apply greyscale text colors and modify them on hover:
 
 ```html
@@ -527,6 +563,8 @@ Apply greyscale text colors and modify them on hover:
 <div hover-color-fff></div>
 ```
 
+### Background colors
+
 Do the same for background colors:
 
 ```html
@@ -563,6 +601,20 @@ Do the same for background colors:
 <div hover-bg-ddd></div>
 <div hover-bg-eee></div>
 <div hover-bg-fff></div>
+```
+
+### Borders
+
+Apply borders:
+
+```html
+<div stroke></div>
+<div stroke-y></div> <!-- top and bottom -->
+<div stroke-x></div> <!-- left and right -->
+<div stroke-top></div>
+<div stroke-right></div>
+<div stroke-bottom></div>
+<div stroke-left></div>
 ```
 
 Apply rounded corners:
@@ -629,6 +681,8 @@ the first and last children.
 <button rounded-y-first-last-m>Middle</button> <!-- no rounding applied -->
 <button rounded-y-first-last-m>Last</button>   <!-- rounded-bottom-m -->
 ```
+
+### Interaction
 
 There are some attributes to apply styling that affects interaction:
 
@@ -714,7 +768,7 @@ Not recommended. There are no tests, and there's no guarantee that these
 attribute names don't conflict with other libraries.
 
 
-# Inspiration
+## Inspiration
 
 Heavily inspired by the utility-first CSS framework [Tailwind][tailwind].
 
